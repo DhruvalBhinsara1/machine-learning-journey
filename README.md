@@ -1,44 +1,99 @@
+# Machine Learning Journey
 
-# 👋 Hi, I'm Dhruval Bhinsara — Welcome to My Machine Learning Journey
+A personal learning repository for building machine learning fundamentals with Python, scikit-learn, NumPy, and supporting computer science practice.
 
-This repository is my personal tracker, notebook, and portfolio for mastering Data Structures, Algorithms, and Machine Learning. Currently, I am reading "Hands-On Machine Learning with Scikit-Learn and PyTorch" and watching YouTube tutorials to learn and understand ML concepts. My goal: build solid ML fundamentals, complete Andrew Ng’s specialization, create portfolio projects, and land an ML internship by mid-2026.
+This repo is part study log, part notebook collection, and part small-project workspace. It includes hands-on notebooks for common ML workflows, Python and NumPy notes, DSA material, and a small decision tree music recommender example.
 
-## 📁 Repository Structure
+## What's Inside
 
-- **DSA Notes/**
-  - **Programs/**: My Java programs for DSA concepts
-  - **Main.java**: Entry point for DSA programs
-- **Reference Books/**: My collection of reference materials and books
+- Core machine learning notebooks covering preprocessing, data splitting, regression, classification, clustering, PCA, pipelines, cross-validation, metrics, feature encoding, visualization, and hyperparameter tuning.
+- A decision tree project that trains and saves a simple music recommender model from `music.csv`.
+- Python notes for object-oriented programming, decorators, and advanced Python concepts.
+- NumPy array notes and smaller example notebooks.
+- DSA notes, PDFs, and practice programs in Java and C++.
+- Reference material for deeper math and ML study.
 
-## 🏁 Getting Started
+## Repository Structure
 
-1. Clone my repository:
+```text
+.
+|-- Basic Notebooks/              # scikit-learn practice notebooks
+|-- Core Python Notes/            # Python language notes
+|-- DSA Notes/                    # DSA PDFs and Java/C++ practice programs
+|-- DecisionTrees/
+|   `-- Music Recommender/        # decision tree demo, dataset, saved model, DOT export
+|-- Example Codes/                # extra ML examples and tutorials
+|-- NumPy Notes/                  # NumPy array notes
+|-- Reference Books/              # reference PDFs
+|-- PROGRESS.md                   # short progress notes and cleanup ideas
+`-- README.md
+```
 
-   ```sh
-   git clone https://github.com/DhruvalBhinsara1/machine-learning-journey.git
-   ```
+## Notebook Map
 
-2. Explore the folders for my notes, programs, and resources.
+| Area | Files |
+| --- | --- |
+| ML basics | `preprocessing.ipynb`, `Data Splitting.ipynb`, `Metric.ipynb`, `Visualization.ipynb` |
+| Supervised learning | `Regression.ipynb`, `classification.ipynb` |
+| Model evaluation | `Cross Validation.ipynb`, `HyperParameter Tuning.ipynb` |
+| Feature work | `Feature Encoding.ipynb`, `PCA.ipynb`, `Pipeline.ipynb` |
+| Unsupervised learning | `Clustering.ipynb` |
+| Python and NumPy | `Advanced Python.ipynb`, `OOPS.ipynb`, `NumPy Arrays.ipynb` |
+| Projects/examples | `DecisionTree.ipynb`, `Music Suggestion.ipynb`, `Music Suggestion with job lib.ipynb`, `Example1.ipynb`, `python-sklearn-linear-regression.ipynb` |
 
-## 📚 Notebooks (short)
+## Featured Example: Music Recommender
 
-- `preprocessing.ipynb` — basic scaling and preprocessing examples.
-- `PCA.ipynb` — principal component analysis demo and explained variance.
-- `Pipeline.ipynb` — small `sklearn` pipeline combining scaler, PCA, and a model.
-- `classification.ipynb` — comparisons of common classifiers and evaluation.
-- `Regression.ipynb` — simple regression example with metrics.
-- `Clustering.ipynb` — clustering algorithms with visualizations.
-- `HyperParameter Tuning.ipynb` — GridSearch/RandomSearch examples.
-- `Cross Validation.ipynb` — cross-validation usage and examples.
-- `Visualization.ipynb` — plotting and data exploration snippets.
-- `DecisionTrees/Music Recommender/` — a small project with `music.csv`, a trained `music_recommender.joblib`, and demo notebooks (one filename has a typo: `DescisionTree.ipynb`).
+The `DecisionTrees/Music Recommender/` folder contains a small decision tree classification example:
 
-See `PROGRESS.md` for a short factual summary of what I reviewed and suggested next steps.
+- `music.csv` - training data
+- `DecisionTree.ipynb` - trains a `DecisionTreeClassifier`
+- `music_recommender.joblib` - saved model artifact
+- `music_recommender.dot` - GraphViz export of the trained tree
+- `Music Suggestion with job lib.ipynb` - loads the saved model for prediction
 
-## 🤝 Contributing
+It is intentionally simple and useful for practicing the train, save, load, and inspect cycle.
 
-This is my personal journey, but I welcome suggestions, resources, or feedback! Feel free to open issues or submit pull requests to help me improve or add new content.
+## Getting Started
 
-## 📜 License
+Clone the repository:
 
-This project is licensed under the MIT License.
+```sh
+git clone https://github.com/DhruvalBhinsara1/machine-learning-journey.git
+cd machine-learning-journey
+```
+
+Create an environment and install the common notebook dependencies:
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+pip install jupyterlab notebook numpy pandas matplotlib scikit-learn joblib
+```
+
+Start Jupyter:
+
+```sh
+jupyter lab
+```
+
+Then open the notebook you want to study or run. Most notebooks are self-contained, but a few examples depend on local files in the same folder, such as `music.csv` in the Music Recommender project.
+
+## Current Focus
+
+The repo is currently focused on:
+
+- Strengthening Python and NumPy foundations.
+- Practicing the standard scikit-learn workflow: prepare data, train models, evaluate results, tune parameters, and save artifacts.
+- Building up from small notebooks toward more complete ML projects.
+- Keeping DSA practice alongside ML study for interview preparation.
+
+## Notes
+
+- This is a learning repo, not a packaged Python library.
+- Some notebooks still need cleaner intro markdown and more consistent filenames.
+- Generated files such as saved models and compiled classes are present where they support the learning examples.
+- See `PROGRESS.md` for a short list of cleanup ideas and next steps.
+
+## License
+
+No license file is included yet.
